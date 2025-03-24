@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .navbar {
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6f61;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  #contact form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
