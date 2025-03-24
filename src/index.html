@@ -6,11 +6,66 @@
   <title>Menu Coffee & Tea</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('background.jpg'); /* Thêm hình nền */
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8); /* Làm navbar trong suốt */
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: rgba(0, 0, 0, 0.6); /* Làm mờ nền */
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .hero .btn {
+      font-size: 1.2rem;
+      padding: 10px 30px;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.9); /* Làm thẻ sản phẩm trong suốt */
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .card-title {
+      font-weight: bold;
+    }
+    .price {
+      color: #28a745;
+      font-weight: bold;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#">Coffee & Tea</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -18,7 +73,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#menu">Menu</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Liên hệ</a>
@@ -26,18 +81,92 @@
       </ul>
     </div>
   </nav>
-
+  <!-- Hero Section -->
+  <section class="hero">
+      <h1>Coffee on the Go</h1>
+      <p>Thưởng thức những ly cà phê và trà tuyệt vời nhất, mọi lúc mọi nơi.</p>
+      <a href="#menu" class="btn btn-success">Khám phá Menu</a>
+  </section>
+    <!-- About Section -->
+    <section id="about" class="container mt-5">
+      <h2 class="text-center mb-4" style="color: #28a745;">Giới thiệu</h2>
+      <p class="text-center" style="color:#2679a0">
+        Chào mừng bạn đến với Coffee On The Go - nơi mang đến những ly cà phê và trà tuyệt vời nhất. 
+        Chúng tôi tự hào sử dụng nguyên liệu chất lượng cao và công thức pha chế độc đáo để mang đến trải nghiệm tuyệt vời cho bạn.
+      </p>
+  </section>
   <!-- Menu Section -->
   <section id="menu" class="container mt-5">
-    <h2 class="text-center">Menu</h2>
+    <h2 class="text-center mb-4" style="color: #28a745;">Menu</h2>
     <div class="row">
-      <div class="col-md-4">
+      <!-- Sản phẩm 1 -->
+      <div class="col-md-4 mb-4">
         <div class="card">
           <img src="coffee.jpg" class="card-img-top" alt="Coffee">
-          <div class="card-body">
+          <div class="card-body text-center">
             <h5 class="card-title">Cà phê Sữa</h5>
             <p class="card-text">Một ly cà phê sữa ngon tuyệt.</p>
             <p class="price">40,000 VNĐ</p>
+            <button class="btn btn-primary">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+      <!-- Sản phẩm 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="tea.jpg" class="card-img-top" alt="Tea">
+          <div class="card-body text-center">
+            <h5 class="card-title">Trà Đào</h5>
+            <p class="card-text">Trà đào thơm ngon, giải nhiệt.</p>
+            <p class="price">35,000 VNĐ</p>
+            <button class="btn btn-primary">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+      <!-- Sản phẩm 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="matcha.jpg" class="card-img-top" alt="Matcha">
+          <div class="card-body text-center">
+            <h5 class="card-title">Matcha Latte</h5>
+            <p class="card-text">Matcha Latte thơm ngon, bổ dưỡng.</p>
+            <p class="price">50,000 VNĐ</p>
+            <button class="btn btn-primary">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+      <!-- Sản phẩm 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="espresso.jpg" class="card-img-top" alt="Espresso">
+          <div class="card-body text-center">
+            <h5 class="card-title">Espresso</h5>
+            <p class="card-text">Espresso đậm đà, mạnh mẽ.</p>
+            <p class="price">45,000 VNĐ</p>
+            <button class="btn btn-primary">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+      <!-- Sản phẩm 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="mocha.jpg" class="card-img-top" alt="Mocha">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mocha</h5>
+            <p class="card-text">Mocha ngọt ngào, quyến rũ.</p>
+            <p class="price">55,000 VNĐ</p>
+            <button class="btn btn-primary">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+      <!-- Sản phẩm 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="black_tea.jpg" class="card-img-top" alt="Black Tea">
+          <div class="card-body text-center">
+            <h5 class="card-title">Trà Đen</h5>
+            <p class="card-text">Trà đen truyền thống, thanh mát.</p>
+            <p class="price">30,000 VNĐ</p>
             <button class="btn btn-primary">Thêm vào giỏ</button>
           </div>
         </div>
@@ -47,26 +176,42 @@
 
   <!-- Contact Section -->
   <section id="contact" class="container mt-5">
-    <h2 class="text-center">Liên hệ</h2>
+    <h2 class="text-center" style="color: #28a745;">Liên hệ</h2>
     <form>
       <div class="form-group">
-        <label for="name">Họ và Tên</label>
+        <label for="name" style="color: #28a745;">Họ và Tên</label>
         <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên">
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
+        <label for="email" style="color: #28a745;">Email</label>
         <input type="email" class="form-control" id="email" placeholder="Nhập email của bạn">
       </div>
       <div class="form-group">
-        <label for="message">Tin nhắn</label>
+        <label for="message" style="color: #28a745;">Tin nhắn</label>
         <textarea class="form-control" id="message" rows="4" placeholder="Nhập tin nhắn của bạn"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Gửi</button>
     </form>
   </section>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Coffee & Tea. All rights reserved.</p>
+  </footer>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Lắng nghe sự kiện click trên tất cả các nút "Thêm vào giỏ"
+      document.querySelectorAll('.btn.btn-primary').forEach(button => {
+        button.addEventListener('click', function () {
+          const productName = this.closest('.card').querySelector('.card-title').textContent;
+          alert(`Cảm ơn bạn đã đặt hàng: ${productName}! Sản phẩm của bạn sẽ được xử lý.`);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
