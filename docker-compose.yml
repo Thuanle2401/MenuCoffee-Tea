@@ -6,6 +6,6 @@ services:
       dockerfile: Dockerfile
     container_name: coffee_house_web
     ports:
-      - "0.0.0.0:8080:80"
+      - "0.0.0.0:9090:80"
     volumes:
       - ./src:/var/www/html
