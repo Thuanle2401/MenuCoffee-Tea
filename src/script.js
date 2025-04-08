@@ -31,7 +31,7 @@
   });
   // Thêm tooltip để hiển thị thông tin khi người dùng di chuột qua các nút.
   document.querySelectorAll('.btn-primary').forEach(button => {
-    button.setAttribute('title', 'Nhấn để thêm sản phẩm vào giỏ hàng');
+    button.setAttribute('title', 'Nhấn để xem thêm thông tin');
   });
 
 
