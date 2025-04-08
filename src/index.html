@@ -53,8 +53,7 @@
             <h5 class="card-title">Cà phê Sữa</h5>
             <p class="card-text">Một ly cà phê sữa ngon tuyệt.</p>
             <p class="price">40,000 VNĐ</p>
-            <button class="btn btn-primary">Thêm vào giỏ</button><br>
-            <a href="product-details/coffee.html" style="font-size: medium; color: #2679a0;">View</a>
+            <a href="product-details/coffee.html" class="btn btn-primary">View</a>
           </div>
         </div>
       </div>
@@ -66,8 +65,7 @@
             <h5 class="card-title">Trà Đào</h5>
             <p class="card-text">Trà đào thơm ngon, giải nhiệt.</p>
             <p class="price">35,000 VNĐ</p>
-            <button class="btn btn-primary">Thêm vào giỏ</button>
-            <a href="product-details/tea.html" style="font-size: medium; color: #2679a0;">View</a>
+            <a href="product-details/tea.html" class="btn btn-primary">View</a>
           </div>
         </div>
       </div>
@@ -79,8 +77,7 @@
             <h5 class="card-title">Matcha Latte</h5>
             <p class="card-text">Matcha Latte thơm ngon, bổ dưỡng.</p>
             <p class="price">50,000 VNĐ</p>
-            <button class="btn btn-primary">Thêm vào giỏ</button>
-            <a href="product-details/matcha.html" style="font-size: medium; color: #2679a0;">View</a>
+            <a href="product-details/matcha.html" class="btn btn-primary">View</a>
           </div>
         </div>
       </div>
@@ -92,8 +89,7 @@
             <h5 class="card-title">Espresso</h5>
             <p class="card-text">Espresso đậm đà, mạnh mẽ.</p>
             <p class="price">45,000 VNĐ</p>
-            <button class="btn btn-primary">Thêm vào giỏ</button>
-            <a href="product-details/espresso.html" style="font-size: medium; color: #2679a0;">View</a>
+            <a href="product-details/espresso.html" class="btn btn-primary">View</a>
           </div>
         </div>
       </div>
@@ -105,8 +101,7 @@
             <h5 class="card-title">Mocha</h5>
             <p class="card-text">Mocha ngọt ngào, quyến rũ.</p>
             <p class="price">55,000 VNĐ</p>
-            <button class="btn btn-primary">Thêm vào giỏ</button>
-            <a href="product-details/mocha.html" style="font-size: medium; color: #2679a0;">View</a>
+            <a href="product-details/mocha.html" class="btn btn-primary">View</a>
           </div>
         </div>
       </div>
@@ -118,8 +113,7 @@
             <h5 class="card-title">Trà Đen</h5>
             <p class="card-text">Trà đen truyền thống, thanh mát.</p>
             <p class="price">30,000 VNĐ</p>
-            <button class="btn btn-primary">Thêm vào giỏ</button>
-            <a href="product-details/black-tea.html" style="font-size: medium; color: #2679a0;">View</a>
+            <a href="product-details/black-tea.html" class="btn btn-primary">View</a>
           </div>
       </div>
     </div>
@@ -141,10 +135,11 @@
         <label for="message" style="color: #28a745;">Tin nhắn</label>
         <textarea class="form-control" id="message" rows="4" placeholder="Nhập tin nhắn của bạn"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Gửi</button>
+      <div class="mail">
+        <a href="mailto:lengocthuanti21@gmail.com">Gửi</a>
+      </div>
     </form>
   </section>
-
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Coffee & Tea. All rights reserved.</p>
@@ -153,16 +148,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Lắng nghe sự kiện click trên tất cả các nút "Thêm vào giỏ"
-      document.querySelectorAll('.btn.btn-primary').forEach(button => {
-        button.addEventListener('click', function () {
-          const productName = this.closest('.card').querySelector('.card-title').textContent;
-          alert(`Cảm ơn bạn đã đặt hàng: ${productName}! Sản phẩm của bạn sẽ được xử lý.`);
-        });
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
