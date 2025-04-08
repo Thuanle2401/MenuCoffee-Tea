@@ -1,25 +1,69 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
+    background-image: url('./images/background.jpg'); /* Thêm hình nền */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
   
   .navbar {
     margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Làm navbar trong suốt */
   }
   
-  .card {
+  .navbar-brand, .nav-link {
+    color: #fff !important;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.6); /* Làm mờ nền */
+    color: #fff;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
     margin-bottom: 20px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  .hero .btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+  }
+  .card {
+    background-color: rgba(255, 255, 255, 0.9); /* Làm thẻ sản phẩm trong suốt */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  .card-title {
+    font-weight: bold;
+  }
+  .price {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6f61;
+  }
+  footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
   }
   
   .card-img-top {
     height: 200px;
     object-fit: cover;
-  }
-  
-  .price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ff6f61;
   }
   
   button {
