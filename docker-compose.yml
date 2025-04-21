@@ -8,5 +8,5 @@ services:
     ports:
       - "0.0.0.0:9090:80"
     volumes:
-      - ./src:/var/www/html
-      - ./icon:/var/www/html
+      - ./src:/var/www/html/src
+      - ./icon:/var/www/html/icon

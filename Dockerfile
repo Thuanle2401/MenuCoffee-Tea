@@ -1,8 +1,8 @@
 FROM php:7.2-apache
 
 # Sao chép mã nguồn vào container
-COPY ./src /var/www/html/
-COPY ./icon /var/www/html/
+COPY ./src /var/www/html/src
+COPY ./icon /var/www/html/icon
 RUN chmod -R 755 /var/www/html
 
 # Mở cổng 80 để truy cập ứng dụng
