@@ -9,4 +9,4 @@ services:
       - "0.0.0.0:9090:80"
     volumes:
       - ./src:/var/www/src
-      - ./icon:/var/www/html/icon
+      - ./icon:/var/www/icon
