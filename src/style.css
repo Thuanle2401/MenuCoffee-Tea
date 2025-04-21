@@ -83,7 +83,6 @@ body {
     max-width: 600px; /* Đặt giới hạn chiều rộng */
     margin: 0 auto; /* Căn giữa theo chiều ngang */
     text-align: center;
-    border: 1px solid #007bff;
     padding: 10px 20px;
     border-radius: 5px;
   }
