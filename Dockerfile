@@ -1,4 +1,4 @@
-FROM php:7.4-apache
+FROM php:7.2-apache
 
 # Sao chép mã nguồn vào container
 COPY ./src /var/www/html/
