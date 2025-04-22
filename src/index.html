@@ -4,38 +4,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Coffee & Tea</title>
+  <title>Coffee On The Go</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="../icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-16x16.png">
-  <link rel="manifest" href="../icon/site.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>☕</text></svg>">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">Coffee & Tea</a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="./images/coffee-logo.webp" class="navbar-logo">
+      Coffee & Tea
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#about">About</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">Giới thiệu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#menu">Menu</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Liên hệ</a>
         </li>
+        <li class="nav-item">
+          <button id="theme-toggle" class="btn btn-outline-light">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
   <!-- Hero Section -->
   <section class="hero">
+    <div class="hero-content">
       <h1>Coffee on the Go</h1>
-      <p>Thưởng thức những ly cà phê và trà tuyệt vời nhất, mọi lúc mọi nơi.</p>
-      <a href="#menu" class="btn btn-success">Khám phá Menu</a>
+      <p class="hero-description">Thưởng thức những ly cà phê và trà tuyệt vời nhất, mọi lúc mọi nơi.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-success btn-lg">Khám phá Menu</a>
+        <a href="#about" class="btn btn-outline-light btn-lg ml-3">Tìm hiểu thêm</a>
+      </div>
+    </div>
   </section>
     <!-- About Section -->
     <section id="about" class="container mt-5">
@@ -122,10 +138,10 @@
       </div>
     </div>
   </section>
-
   <!-- Contact Section -->
-  <section id="contact" class="container mt-5">
-    <h2 class="text-center" style="color: #28a745;">Liên hệ</h2>
+<section id="contact" class="container mt-5">
+  <div class="contact-wrapper">
+    <h2 class="text-center" style="color: #a72859;">Liên hệ</h2>
     <form>
       <div class="form-group">
         <label for="name" style="color: #28a745;">Họ và Tên</label>
@@ -140,18 +156,33 @@
         <textarea class="form-control" id="message" rows="4" placeholder="Nhập tin nhắn của bạn"></textarea>
       </div>
       <div class="mail">
-        <button >Gửi</button>
+        <button type="submit">Gửi</button>
       </div>
     </form>
-  </section>
+  </div>
+</section>
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Coffee & Tea. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><img src="./images/facebook-icon.webp" alt="Facebook"></a>
+      <a href="https://instagram.com" target="_blank"><img src="./images/instagram-icon.webp" alt="Instagram"></a>
+      <a href="https://twitter.com" target="_blank"><img src="./images/twitter-icon.webp" alt="Twitter"></a>
+    </div>
+    <ul class="footer-nav">
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+    <p>Địa chỉ: 470 Trần Đại Nghĩa, Đà Nẵng, Việt Nam</p>
+    <p>Điện thoại: <a href="tel:+84123456789">+84 123 456 789</a></p>
+    <p>Email: <a href="mailto:caffeeonthego@gmail.com">caffeeonthego@gmail.com</a></p>
+    <button id="back-to-top" class="btn btn-success">Lên đầu trang</button>
   </footer>
-  <script src="script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
   
 </body>
 </html>
