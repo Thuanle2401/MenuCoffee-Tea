@@ -1,5 +1,5 @@
   // Khi người dùng nhấn nút "Thêm vào giỏ", hiển thị thông báo alert
-  document.querySelectorAll('.btn-primary').forEach(button => {
+  document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', function () {
       alert('Sản phẩm đã được thêm vào giỏ hàng!');
     });
