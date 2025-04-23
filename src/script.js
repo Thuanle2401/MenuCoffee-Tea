@@ -1,11 +1,7 @@
-  // Khi người dùng nhấn nút "Thêm vào giỏ", hiển thị một thông báo nhỏ (toast) để xác nhận.
+  // Khi người dùng nhấn nút "Thêm vào giỏ", hiển thị thông báo alert
   document.querySelectorAll('.btn-primary').forEach(button => {
     button.addEventListener('click', function () {
-      const toast = document.getElementById('toast');
-      toast.style.display = 'block';
-      setTimeout(() => {
-        toast.style.display = 'none';
-      }, 3000); // Ẩn thông báo sau 3 giây
+      alert('Sản phẩm đã được thêm vào giỏ hàng!');
     });
   });
   // Thêm hiệu ứng khi người dùng di chuột qua các thẻ sản phẩm.
