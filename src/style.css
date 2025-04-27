@@ -578,13 +578,3 @@ body[data-theme="dark"] {
 #theme-toggle:hover {
   transform: rotate(360deg);
 }
-
-/* Đảm bảo hình ảnh và nội dung không bị chồng chéo */
-img.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
-.col-md-6 {
-  margin-bottom: 20px;
-}
