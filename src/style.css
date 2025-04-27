@@ -8,8 +8,6 @@ body {
 
 .navbar {
   margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  /* Làm navbar trong suốt */
 }
 
 .navbar-brand,
@@ -31,8 +29,6 @@ body {
 }
 
 .price {
-  color: #28a745;
-  font-weight: bold;
   font-size: 18px;
   font-weight: bold;
   color: #ff6f61;
@@ -159,14 +155,6 @@ h2 {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-description {
-    font-size: 1.2rem;
-  }
-
   .hero-buttons .btn {
     display: block;
     width: 100%;
@@ -337,7 +325,6 @@ a {
 .form-control:focus {
   border-color: #28a745;
   box-shadow: 0 0 8px rgba(40, 167, 69, 0.2);
-  outline: none;
 }
 
 .form-control::placeholder {
@@ -590,4 +577,14 @@ body[data-theme="dark"] {
 
 #theme-toggle:hover {
   transform: rotate(360deg);
+}
+
+/* Đảm bảo hình ảnh và nội dung không bị chồng chéo */
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.col-md-6 {
+  margin-bottom: 20px;
 }
