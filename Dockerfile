@@ -4,7 +4,7 @@ FROM php:7.2-apache
 WORKDIR /var/www/html
 
 # Sao chép mã nguồn vào container
-COPY . .
+COPY ./src .
 
 # Phân quyền cho thư mục
 RUN chmod -R 755 /var/www/html
