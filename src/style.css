@@ -10,8 +10,7 @@ body {
   margin-bottom: 20px;
 }
 
-.navbar-brand,
-.nav-link {
+.navbar-brand, .nav-link {
   color: #fff !important;
 }
 
@@ -63,21 +62,6 @@ h2 {
   padding: 0 20px;
   margin-bottom: 60px;
 }
-
-/* Điều chỉnh overlay gradient */
-/* .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    45deg,
-    rgba(40, 167, 69, 0.7),
-    rgba(38, 121, 160, 0.7)
-  );
-  z-index: 1;
-} */
 
 .hero-content {
   position: relative;
