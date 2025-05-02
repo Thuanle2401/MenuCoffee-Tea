@@ -102,41 +102,6 @@ h2 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .hero-buttons .btn {
@@ -504,26 +469,6 @@ a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Dark mode styles */
-[data-theme="light"] {
-  --primary-bg: #ffffff;
-  --primary-text: #333333;
-  --card-bg: #ffffff;
-  --card-text: #333333;
-}
-
-[data-theme="dark"] {
-  --primary-bg: #1a1a1a;
-  --primary-text: #ffffff;
-  --card-bg: #2d2d2d;
-  --card-text: #e0e0e0;
-  --section-bg: rgba(45, 45, 45, 0.9);
-}
-
-body {
-  font-family: Arial, sans-serif;
-  transition: all 0.3s ease;
-}
 
 /* Light mode background */
 body[data-theme="light"] {
