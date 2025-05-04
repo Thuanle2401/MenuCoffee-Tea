@@ -6,14 +6,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.navbar {
-  margin-bottom: 20px;
-}
-
-.navbar-brand, .nav-link {
-  color: #fff !important;
-}
-
 .card {
   background-color: rgba(255, 255, 255, 0.9);
   /* Làm thẻ sản phẩm trong suốt */
