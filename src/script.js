@@ -42,57 +42,98 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// Theme toggler functionality
-document.addEventListener('DOMContentLoaded', () => {
-  // Khởi tạo theme
-  const initTheme = () => {
-    // Kiểm tra theme đã lưu trong localStorage
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
 
-    if (savedTheme) {
-      document.body.setAttribute('data-theme', savedTheme);
-      updateThemeIcon(savedTheme);
-    } else if (prefersDark) {
-      document.body.setAttribute('data-theme', 'dark');
-      updateThemeIcon('dark');
-    } else {
-      document.body.setAttribute('data-theme', 'light');
-      updateThemeIcon('light');
-    }
-  };
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  const icon = themeToggle.querySelector('i');
+  if (body.classList.contains('dark-mode')) {
+    icon.classList.replace('fa-moon', 'fa-sun');
+  } else {
+    icon.classList.replace('fa-sun', 'fa-moon');
+  }
+});
 
-  // Cập nhật icon
-  const updateThemeIcon = (theme) => {
-    const icon = document.querySelector('#theme-toggle i');
-    if (theme === 'dark') {
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    } else {
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    }
-  };
+// Back to Top Button
+const backToTopButton = document.getElementById('back-to-top');
 
-  // Xử lý sự kiện click nút toggle
-  const themeToggle = document.getElementById('theme-toggle');
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = document.body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
 
-    document.body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
-
-    // Thêm animation khi chuyển theme
-    document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-    document.querySelectorAll('.card').forEach(card => {
-      card.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-    });
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
+});
 
-  // Khởi tạo theme khi trang load
-  initTheme();
+// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Form Validation
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  // Basic form validation
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  
+  if (!name || !email || !message) {
+    alert('Vui lòng điền đầy đủ thông tin!');
+    return;
+  }
+  
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Vui lòng nhập email hợp lệ!');
+    return;
+  }
+  
+  // If validation passes, you can send the form data to your server here
+  alert('Cảm ơn bạn đã gửi phản hồi! Chúng tôi sẽ liên hệ lại sớm.');
+  contactForm.reset();
+});
+
+// Navbar Scroll Effect
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.style.padding = '0.5rem 0';
+    navbar.style.backgroundColor = 'rgba(40, 167, 69, 0.95)';
+  } else {
+    navbar.style.padding = '1rem 0';
+    navbar.style.backgroundColor = 'rgba(40, 167, 69, 0.95)';
+  }
+});
+
+// Add loading animation to images
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('load', function() {
+    this.classList.add('loaded');
+  });
 });
 
 
